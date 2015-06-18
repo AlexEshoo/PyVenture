@@ -22,7 +22,7 @@ print room_dict
 ### Main loop ###
 
 while user_in != 'quit':
- 	current_room = coord_dict[str(player1.location)] #Call the key coords as a string
+ 	current_room = player1.get_room(coord_dict) #coord_dict[str(player1.location)] #Call the key coords as a string
  	current_room.set_stage() #should probably only be done if the room changes to avoid too much text
 
  	user_in = raw_input('Enter a command: ')

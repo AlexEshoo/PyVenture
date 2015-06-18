@@ -17,6 +17,13 @@ class player(object):
 	def warp(self,place):
 		self.location = place
 
+	def get_room(self,coord_dict):
+		try:
+			return coord_dict[str(self.location)]
+		except:
+			print 'Not a valid room'
+
 	def gaze(self,direction): #Look in a particular direction to see what's there
 		pass
+
 
